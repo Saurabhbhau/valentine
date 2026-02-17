@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Anuradha ❤️ My Valentine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+
+body{
+  background:linear-gradient(180deg,#0f0c29,#302b63,#24243e);
+  color:#fff;
+  scroll-behavior:smooth;
+}
+
+/* section */
+section{
+  min-height:100vh;
+  padding:60px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+/* hearts */
+.heart{
+  font-size:4rem;
+  animation:beat 1.2s infinite;
+  margin:20px 0;
+}
+@keyframes beat{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.3)}
+  100%{transform:scale(1)}
+}
+
+/* home */
+.home h1{font-size:3rem}
+.home h2{font-size:2.2rem;margin-top:10px;color:#ffb3c6}
+
+/* photo */
+.photo img{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid #ff758f;
+  box-shadow:0 0 30px rgba(255,117,143,0.6);
+}
+.photo h2{margin-top:20px;font-size:2rem}
+
+/* message */
+.message p{
+  font-size:1.3rem;
+  max-width:650px;
+  line-height:1.9;
+}
+
+/* card */
+.card{
+  background:rgba(255,255,255,0.15);
+  padding:30px;
+  border-radius:25px;
+  max-width:650px;
+  backdrop-filter:blur(10px);
+}
+.card h2{font-size:2.3rem;margin-bottom:15px}
+
+/* buttons */
+.btn{
+  margin:10px;
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  font-size:1.1rem;
+  cursor:pointer;
+}
+.yes{background:#ff4d6d;color:white}
+.no{background:#555;color:white}
+
+/* floating hearts */
+.floating{
+  position:fixed;
+  bottom:-10px;
+  font-size:20px;
+  animation:float 6s infinite;
+  opacity:0.6;
+}
+@keyframes float{
+  0%{transform:translateY(0)}
+  100%{transform:translateY(-120vh)}
+}
+
+/* footer */
+footer{
+  padding:20px;
+  text-align:center;
+  opacity:0.9;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Background Music -->
+<audio controls autoplay loop>
+  <source src="https://raw.githubusercontent.com/Saurabhbhau/valentine-website/main/Tu%20Nazm%20Nazm%20Sa%20Mere%20Song%20%20Nazm%20Nazm%20Song%20%20WhatsApp%20status%20%20Status%20(1).mp3" type="audio/mp3">
+</audio>
+<!-- ❤️ Floating Hearts -->
+<script>
+for(let i=0;i<25;i++){
+ let h=document.createElement("div");
+ h.innerHTML="❤️";
+ h.className="floating";
+ h.style.left=Math.random()*100+"vw";
+ h.style.animationDuration=(3+Math.random()*5)+"s";
+ document.body.appendChild(h);
+}
+</script>
+
+<!-- Section 1 -->
+<section class="home">
+  <h1>Happy Valentine’s Day 💖</h1>
+  <div class="heart">❤️</div>
+  <h2>Anuradha</h2>
+  <p>You are my forever</p>
+</section>
+
+<!-- Section 2 -->
+<section class="photo">
+  <img src="https://i.ibb.co/qSZz18W/IMG-20260203-230717-666.jpg" alt="My Love">
+  <h2>My Beautiful Love 🌹</h2>
+</section>
+
+<!-- Section 3 -->
+<section class="message">
+  <p>
+    Anuradha,<br><br>
+    Tum meri zindagi ka sabse khoobsurat hissa ho.<br>
+    Tumhari muskurahat meri duniya roshan karti hai.<br>
+    Har din tumhare saath aur zyada pyaar ho jaata hai ❤️
+  </p>
+</section>
+
+<!-- Section 4 -->
+<section>
+  <div class="card">
+    <h2>💌 Just For You 💌</h2>
+    <p>
+      I may not be perfect,<br>
+      but my love for you is true.<br>
+      Har pal, har din,<br>
+      sirf tum ❤️
+    </p>
+    <h3>I Love You Anuradha 💞</h3>
+  </div>
+</section>
+
+<!-- Section 5 Proposal -->
+<section>
+  <h1>Will You Be My Valentine? 💍</h1>
+  <button class="btn yes" onclick="yes()">YES ❤️</button>
+  <button class="btn no" onclick="no()">NO 🙈</button>
+  <p id="reply"></p>
+</section>
+
+<!-- Section 6 WhatsApp -->
+<section>
+  <h2>💚 Share This Love 💚</h2>
+  <a class="btn yes" href="https://wa.me/?text=Anuradha%20I%20Love%20You%20Forever%20❤️" target="_blank">
+    Share on WhatsApp
+  </a>
+</section>
+
+<footer>
+  Made with ❤️ only for Anuradha
+</footer>
+
+<script>
+function yes(){
+ document.getElementById("reply").innerHTML="Yayyy! I knew it 😍❤️";
+}
+function no(){
+ document.getElementById("reply").innerHTML="It’s okay… I’ll still love you 💕";
+}
+</script>
+
+</body>
+</html>
+
